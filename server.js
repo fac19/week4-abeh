@@ -1,6 +1,9 @@
 const http = require("http");
 const fs = require("fs");
 const path = require("path");
+const homeHandler = require('./handlers/homeHandler')
+const blogHandler = require('./handlers/blogHandler')
+const missingHandler = require('./handlers/missingHandler')
 const server = http.createServer(handler);
 const querystring = require('querystring');
 const message = "hello!";
@@ -15,36 +18,15 @@ function handler(request, response) {
   const method = request.method;
   const filePath = path.join(__dirname, "/public");
   
-  if (endpoint === "/") { 
-      
-      fs.readFile(filePath + '/index.html', function(error, file) {
-        if (error) {
-            console.error(error);
-            response.writeHead(404, { "content-type": "text/html" });
-            response.end("<h1>Not found</h1>");
-        } else {
-            // const urlArray = request.url.split("."); // e.g. "/style.css" -> ["/style", "css"]
-            // const extension = urlArray[1]; // e.g. "css"
-            // const type = types[extension]; // e.g. "text/css"
-            response.writeHead(200, { "content-type": "text/html" });
-            response.end(file);
-      }
-    });
+  if (endpoint === "/") {
+      homeHandler(request, response);
   } 
   else if (endpoint === "/create-post") {
-    var allTheData = "";
-    request.on("data", function(chunkOfData) {
-      allTheData += chunkOfData;
-    });
-    request.on('end', function () {
-       let convertedData = querystring.parse(allTheData);
-       console.log(convertedData);
-       response.writeHead(302, {'location': '/'});
-       response.end();
-    });
+      blogHandler(request, response);
+   
     
   } else {
-    //catch errors
+     missingHandler(request, response)
   }
 }
 
