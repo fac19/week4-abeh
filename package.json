@@ -1,0 +1,22 @@
+{
+  "name": "week4-abeh",
+  "version": "1.0.0",
+  "description": "Creating a microblogging site.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fac19/week4-abeh.git"
+  },
+  "author": "Hettie, Joe, Tom, Campbell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fac19/week4-abeh/issues"
+  },
+  "homepage": "https://github.com/fac19/week4-abeh#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
