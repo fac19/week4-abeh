@@ -55,16 +55,17 @@ test("Check status code is 302 on post creation", t => {
     })
 })
 
-// test("Blog route - post - password - payload", t => {
-//   supertest(router)
-//     .post("/create-post")
-//     .send(["how are you"])
-//     .expect(302)
-//     .expect("Content-Type", "application/json")
-//     .end((err, res) => {
-//       t.error(err);
-//       t.deepEqual(res.body, ["how are you"]);
-//       t.end();
-//     });
-// });
-
+test("Does blog post send correct data", t => {
+  supertest(router)
+    .post("/create-post")
+    .send('blogpost=hello')
+    .redirects()
+    .expect(200)
+    .expect("Content-Type", /html/)
+    .end((err, res) => {
+      console.log(res.text)
+      t.error(err);
+      t.equal(res.text.includes('hello'), true);
+      t.end();
+    });
+});
