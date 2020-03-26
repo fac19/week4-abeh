@@ -3,10 +3,12 @@
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
     
   </head>
   <body>
     <h3>Create a blog post</h3>
-</body>
+    <form action="/create-post" method="POST">
+      <textarea name="blogpost" rows="10" cols="14"> </textarea>
+      <button type="submit">Send</button>
+    </form>
  </html>

@@ -1,7 +1,8 @@
 const homeHandler = require("./handlers/home");
 const createPost = require("./handlers/createPost");
 const missingHandler = require("./handlers/missing");
-const publicHandler = require("./handlers/public.js")
+const publicHandler = require("./handlers/public.js");
+const displayForm = require("./handlers/displayForm");
 
 const fs = require("fs");
 
@@ -16,6 +17,8 @@ function router(request, response) {
     publicHandler(request, response)
   } else if (method === "POST" && endpoint === "/create-post") {
     createPost(request, response);
+  } else if (endpoint === "/displayForm") {
+    displayForm(request, response);
   } else {
     missingHandler(request, response);
   }
