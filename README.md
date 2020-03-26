@@ -1,4 +1,7 @@
-# Week4-abeh - Microblogging Project :hamburger: 
+# Week4-abeh - Microblogging Project :hamburger:
+
+## Description
+Microblogging website using a server.
 
 ## Install 
 To install the project: 
@@ -9,19 +12,21 @@ To install the project:
 
 ## DAY 1
 - Thought it was a good idea to group mob the ⚠️ WHOLE ⚠️ server:
- Optimist: "Yeah we can knock that out in 15"
+- Optimist: "Yeah we can knock that out in 15"
  Rest: "yeah mate yeah"
 - SO, we got frazzled.
-
-
 
 ## DAY 2
 - Finished off the server and wisely split into pairs
 - Worked on refactoring the server and tests
 - In the afternoon we focused on CSS and Heroku
 
-## Description
-Microblogging website using a server.
+## Methodology & Planning
+### Wireframe
+:frog:
+
+### Testing methodology
+Testing, testing 123.
 
 ## Core User Stories
 - [x] A page with a form to submit posts, and a page showing all posts
@@ -64,13 +69,6 @@ Microblogging website using a server.
 - P1 Highest Priority - Core user stories
 - P2 Medium Priority - Stretch user stories
 - P3 Low Priority - Additional stretch user stories
-
-## Methodology & Planning
-### Wireframe
-:frog:
-
-### Testing methodology
-Testing, testing 123.
 
 ### Resources
 - https://github.com/fac18/node-workshop  
