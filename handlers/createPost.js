@@ -21,8 +21,8 @@ function createPost(request, response) {
 
       body.appendChild(` 
       <article class="blogPost__container__post">
-          <h3 class="blogPost__container__title">Title: ${convertedData.blogPostTitle}</h3>
-          <h3 class="blogPost__container__title">Written by: ${convertedData.user}</h3>
+          <h2 class="blogPost__container__title">Title: ${convertedData.blogPostTitle}</h2>
+          <h3 class="blogPost__container__title">Author: ${convertedData.user}</h3>
           <p class="blogPost__container__content">${convertedData.blogpost}</p>
       </article>
       `);
