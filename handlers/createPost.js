@@ -6,8 +6,10 @@ function createPost(request, response) {
   let allTheData = "";
   request.on("data", function(chunkOfData) {
     allTheData += chunkOfData;
+    
   });
   request.on("end", function() {
+    console.log("DATA", allTheData)
     let convertedData = querystring.parse(allTheData);
 
     fs.readFile("./public/index.html", "utf8", (err, html) => {
