@@ -8,11 +8,26 @@
     
   </head>
   <body>
+    <nav class="navbar">
+      <span class="logo">X</span>
+      <span class="navbar__links">
+        <a href="/" class="navbar__links__link">home</a>
+        <a href="/displayForm">write post</a>
+      </span>
+    </nav>
     <header>
-      <a href="/">Link to homepage </a>
+      <!-- <a href="/">Link to homepage </a> -->
+ 
     </header>
+    <nav class="navbar">
+      <span class="logo">X</span>
+      <span class="navbar__links">
+        <a href="/">Link to homepage </a>
+      </span>
+    </nav>
+    <div class="form__container">
     <div class="addBlogPostForm__wrapper">
-      <h3>Create a blog post</h3>
+      <h3 class="addBlogPost__titlePage">Create a blog post</h3>
       <form action="/create-post" method="POST" class="addBlogPostForm__form">
         <div class="addBlogPostForm__form__inputContainer">
           <label for="user" id="user" class="addBlogPostForm__form__labels">User:</label>
@@ -28,6 +43,7 @@
       </div>
         <button type="submit">Send</button>
       </form>
+    </div>
     </div>
   
  </html>
