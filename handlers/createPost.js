@@ -9,17 +9,21 @@ function createPost(request, response) {
   });
   request.on("end", function() {
     let convertedData = querystring.parse(allTheData);
-    console.log(convertedData);
 
     fs.readFile("./public/index.html", "utf8", (err, html) => {
       if (err) {
         throw err;
       }
       const root = parse(html);
-      const body = root.querySelector("body");
-      console.log(convertedData);
-      body.appendChild(`<div>${convertedData.blogpost}</div>`);
+      const body = root.querySelector(".blogPost__container");
 
+      body.appendChild(` 
+      <article class="blogPost__container__post">
+          <h3 class="blogPost__container__title">Title: ${convertedData.blogPostTitle}</h3>
+          <h3 class="blogPost__container__title">Written by: ${convertedData.user}</h3>
+          <p class="blogPost__container__content">${convertedData.blogpost}</p>
+      </article>
+      `);
       fs.writeFile("./public/index.html", root.toString(), "utf8", function(
         err
       ) {
@@ -27,7 +31,6 @@ function createPost(request, response) {
         response.writeHead(302, { location: "/" });
         response.end();
       });
-      //   console.log(root.toString()); // This you can write back to file!
     });
   });
 }
