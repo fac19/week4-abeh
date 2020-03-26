@@ -1,0 +1,38 @@
+1. create a router
+2. rename handler function to router
+3. move router function to router.js and export it
+4. import router in server.js
+(uninstall nodemon and do npx nodemon server.js instead)
+
+5. in router - import fs and path
+6. make sure querystring variable is in create post route
+
+Break down module
+homeHandler
+1. Create a handlers folder
+2. touch homeHandler.js and create a homeHandler function
+3. move all logic from endpoint / to homeHandler
+4. in router.js import homeHandler insert it in the endpoint / and passon filePath as a variable
+
+
+creat-post
+1. in handlers folder touch createPost
+2. in createPost create a function createPost && paste the logic thenexport it
+3 import the function in router
+4. in router add (method === "POST" && endpoint === "/create-post")  to the conditional
+
+add missing handler - follow same steps as above 
+
+5. on('end') add the below to write a file with blog entries
+   const data = new URLSearchParams(body);
+    const name = data.get("blogpost");
+    fs.appendFile("log.txt", name, function(err) {
+      if (err) {
+        // append failed
+      } else {
+        response.writeHead(200, { "content-type": "text/html" });
+        response.end(`<h1>Hello ${name}</h1>`);
+      }
+    });
+
+    

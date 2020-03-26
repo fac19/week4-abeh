@@ -16,7 +16,8 @@
     "url": "https://github.com/fac19/week4-abeh/issues"
   },
   "homepage": "https://github.com/fac19/week4-abeh#readme",
-  "devDependencies": {
-    "nodemon": "^2.0.2"
+  "devDependencies": {},
+  "dependencies": {
+    "node-html-parser": "^1.2.13"
   }
 }
