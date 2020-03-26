@@ -63,7 +63,6 @@ test("Does blog post send correct data", t => {
     .expect(200)
     .expect("Content-Type", /html/)
     .end((err, res) => {
-      console.log(res.text)
       t.error(err);
       t.equal(res.text.includes('hello'), true);
       t.end();
