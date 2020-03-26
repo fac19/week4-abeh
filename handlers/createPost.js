@@ -1,4 +1,6 @@
 const querystring = require("querystring");
+const fs = require("fs");
+const parse = require("node-html-parser").parse;
 
 function createPost(request, response) {
   let allTheData = "";
@@ -8,8 +10,25 @@ function createPost(request, response) {
   request.on("end", function() {
     let convertedData = querystring.parse(allTheData);
     console.log(convertedData);
-    response.writeHead(302, { location: "/" });
-    response.end();
+
+    fs.readFile("./public/index.html", "utf8", (err, html) => {
+      if (err) {
+        throw err;
+      }
+      const root = parse(html);
+      const body = root.querySelector("body");
+      console.log(convertedData);
+      body.appendChild(`<div>${convertedData.blogpost}</div>`);
+
+      fs.writeFile("./public/index.html", root.toString(), "utf8", function(
+        err
+      ) {
+        if (err) return console.error(err);
+        response.writeHead(302, { location: "/" });
+        response.end();
+      });
+      //   console.log(root.toString()); // This you can write back to file!
+    });
   });
 }
 
