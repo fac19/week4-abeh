@@ -1,8 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 
-function homeHandler(request, response, filePath) {
-  //   const filePath = path.join(__dirname, "/public");
+function homeHandler(request, response) {
+
   fs.readFile(path.join(__dirname, "..", "public", "index.html"), function(
     error,
     file
