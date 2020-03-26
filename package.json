@@ -4,7 +4,7 @@
   "description": "Creating a microblogging site.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js | tap-spec"
   },
   "repository": {
     "type": "git",
@@ -16,7 +16,11 @@
     "url": "https://github.com/fac19/week4-abeh/issues"
   },
   "homepage": "https://github.com/fac19/week4-abeh#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "supertest": "^4.0.2",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.13.2"
+  },
   "dependencies": {
     "node-html-parser": "^1.2.13"
   }
