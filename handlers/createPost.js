@@ -19,7 +19,7 @@ function createPost(request, response) {
       const body = root.querySelector(".blogPost__container");
 
       body.appendChild(` 
-      <article class="blogPost__container__post">
+      <article class="blogPost__container__post" tabindex="0">
           <h2 class="blogPost__container__title">${convertedData.blogPostTitle}</h2>
           <h3 class="blogPost__container__author">by: ${convertedData.user}</h3>
           <p class="blogPost__container__content">${convertedData.blogpost}</p>
