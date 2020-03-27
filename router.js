@@ -3,6 +3,7 @@ const createPost = require("./handlers/createPost");
 const missingHandler = require("./handlers/missing");
 const publicHandler = require("./handlers/public.js");
 const displayForm = require("./handlers/displayForm");
+const imageHandler = require("./handlers/image.js");
 
 const fs = require("fs");
 
@@ -19,6 +20,8 @@ function router(request, response) {
     createPost(request, response);
   } else if (endpoint === "/displayForm") {
     displayForm(request, response);
+  } else if (endpoint.includes("images")) {
+    imageHandler(request, response)
   } else {
     missingHandler(request, response);
   }
