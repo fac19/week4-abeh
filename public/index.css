@@ -1,103 +1,207 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-h1, h2, h3 {
-    margin: 0;
+.linkHeader {
+  margin-top: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
 }
 
 body {
-    font-family: 'Lato', sans-serif;
-    background-color: pink;
-    margin: 0 auto; 
-    text-align: center;
+  font-family: "Lato", sans-serif;
+  background-color: white;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
 }
 
-h1 {
-    font-size: 2.25rem;
+.title {
+  font-size: 8vw;
+  margin-top: 1rem;
+  letter-spacing: 0.2rem;
+  color: hsl(195, 96%, 49%);
+  /* font-weight: 500; */
 }
 
-h2 {
-    font-size: 1.5rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+.subtitle {
+  letter-spacing: 0.1rem;
+  font-size: 6vw;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  font-weight: 60;
 }
 
 h3 {
-    font-size: 1..2rem;  
+  font-size: 1.5rem;
+  font-weight: 80;
+  letter-spacing: 0.05rem;
 }
 
 p {
-    font-size: 1rem;
+  font-size: 1.6rem;
 }
 
-
+@media only screen and (min-width: 650px) {
+  .subtitle {
+    font-size: 3vw;
+  }
+}
 
 .blogPost__container {
-    margin: 0 auto;
-    background-color: transparent;
-    width: 100vw;
+  margin: 0 auto;
+  background-color: transparent;
+  width: 90vw;
 }
 
-article {    
-    border: solid 5px green;
-    background-color: white;
-    margin-bottom: 10px;
-
+@media only screen and (min-width: 650px) {
+  .blogPost__container {
+    width: 60vw;
+  }
 }
 
+.blogPost__container__post {
+  border: solid 5px hsl(195, 96%, 70%);
+  background-color: hsl(195, 96%, 70%);
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px grey;
+  margin-top: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
 
+.blogPost__container__post:hover {
+  box-shadow: 9px 9px 9px grey;
+}
+
+.blogPost__container__title {
+  font-size: 1.2rem;
+}
+
+.blogPost__container__author {
+  font-size: 1rem;
+}
+
+.blogPost__container__content {
+  font-size: 1rem;
+}
 
 /* form style */
+.form__container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.addBlogPost__titlePage {
+  margin: 3rem 0 3rem 0;
+  font-size: 1.2rem;
+}
+
 .addBlogPostForm__wrapper {
-   display: flex;
-   flex-direction: column;
-   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
 }
 
 .addBlogPostForm__form__inputContainer {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 .addBlogPostForm__form__labels {
-    width: 30vw;
-    text-align: right;
-    padding-right: 1rem;
+  width: 30vw;
+  text-align: right;
+  padding-right: 0.5rem;
+  font-size: 0.7rem;
 }
 
 .addBlogPostForm__form__input {
+  width: 65vw;
+}
+
+@media only screen and (min-width: 650px) {
+  .addBlogPostForm__wrapper {
     width: 60vw;
+  }
+  .addBlogPostForm__form__labels {
+    width: 15vw;
+    padding-right: 1rem;
+    font-size: 1rem;
+  }
+  .addBlogPostForm__form__input {
+    width: 90vw;
+  }
+  .addBlogPost__titlePage {
+    margin: 5rem 0 3rem 0;
+    font-size: 1.5rem;
+  }
+  .addBlogPostForm__form {
+    padding: 1rem;
+    border: 0.5px solid gray;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 2px grey;
+  }
+}
+/* form - button */
+.form__container__button {
+  background-color: hsl(198, 75%, 42%);
+  width: 100%;
+  height: 2rem;
+  color: whitesmoke;
+  border: none;
+  transition: 0.06s ease-in-out;
 }
 
-/* form {
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 30px;
-    outline: solid 5px green;
-    text-align: center;
-    margin: 0 auto;
-    background-color: white;
-    max-width: 940px;
+.form__container__button:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 2px grey;
+  font-weight: bold;
 }
 
-input {
-    display: block;
+/* navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(198, 75%, 42%);
+  color: whitesmoke;
+  padding: 0.8rem;
+  width: 100vw;
 }
 
-button {
-    display: block;
-} */
+.navbar a {
+  color: whitesmoke;
+  text-decoration: none;
+}
 
-@media only screen and (min-width: 450px){
-    /* Homepage */
-    .blogPost__container {
-        max-width: 940px;
-    }
+.navbar__links__link {
+  text-transform: uppercase;
+  transition: 0.1s ease-in;
+  font-size: 0.7rem;
+}
 
+.navbar__links__link:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
 
-
-    /* Form submission */
-
+@media only screen and (min-width: 650px) {
+  /* Homepage */
+  .navbar__links__link {
+    font-size: 1.1rem;
+  }
 }

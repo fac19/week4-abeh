@@ -8,11 +8,18 @@
     
   </head>
   <body>
+    <nav class="navbar">
+        <a href="/" class="navbar__links__link">home</a>
+        <a href="/displayForm" class="navbar__links__link">write post</a>
+    </nav>
     <header>
-      <a href="/">Link to homepage </a>
+      <!-- <a href="/">Link to homepage </a> -->
+ 
     </header>
+ 
+    <div class="form__container">
     <div class="addBlogPostForm__wrapper">
-      <h3>Create a blog post</h3>
+      <h3 class="addBlogPost__titlePage">Create a blog post</h3>
       <form action="/create-post" method="POST" class="addBlogPostForm__form">
         <div class="addBlogPostForm__form__inputContainer">
           <label for="user" id="user" class="addBlogPostForm__form__labels">User:</label>
@@ -26,8 +33,9 @@
       <label for="blogpost" id="blogpost" class="addBlogPostForm__form__labels">Content:</label>
         <textarea name="blogpost" rows="10" cols="14" class="addBlogPostForm__form__input"> </textarea>
       </div>
-        <button type="submit">Send</button>
+        <button class="form__container__button" type="submit">Send</button>
       </form>
+    </div>
     </div>
   
  </html>
