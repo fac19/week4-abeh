@@ -141,3 +141,88 @@ article:hover {
     color: whitesmoke;
     text-decoration: none;
 }
+
+/* error styling */
+
+.errorTitles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10rem;
+    z-index: 100;
+}
+
+.errorMainTitle {
+    width: 80vw;
+    font-size: 4rem;
+}
+
+.errorSubtitle {
+    display: none;
+    width: 80vw;
+    font-size: 3rem;
+}
+
+.errorimage {
+    display: none;
+}
+
+.shrug {
+    display: block;
+    width: 90%;
+    height: 100%;
+    margin-top: -9rem;
+}
+
+@media only screen and (min-width: 1400px){
+    .errorTitles {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 10rem;
+        z-index: 100;
+    }
+    
+    .errorMainTitle {
+        width: 80vw;
+        font-size: 4rem;
+    }
+    
+    .errorSubtitle {
+        display: block;
+        width: 80vw;
+        font-size: 3rem;
+    }
+    
+    .errorimage {
+        display: block;
+        width: 600px;
+        height: 800px;
+    }
+    
+    .shrug {
+        position: fixed;
+        top: 0;
+        left: 00;
+        z-index: -10;
+        margin-top: 0;
+    }
+    
+    .ponder {
+        position: fixed;
+        bottom: -50;
+        right: 0;
+    }
+    
+    .cross {
+        position: fixed;
+        top: -50;
+        right: 0;
+        width: 300px;
+        height: 400px;
+        z-index: 10;
+    }
+}
+
