@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A page that displays the blog posts on the Ugly Duckling Blog"
+    />
+    <title>Blog Home</title>
+    <link rel="stylesheet" type="text/css" href="public/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="/" class="navbar__links__link" id="homeLink">home</a>
+      <a href="/createpost" class="navbar__links__link" id="postLink"
+        >write post</a
+      >
+    </nav>
+    <header class="linkHeader"></header>
+
+    <h1 class="title">Ugly Duckling Blog</h1>
+    <h2 class="subtitle">All the latest FAC gossip</h2>
+
+    <div class="blogPost__container">
+      
+    </div>   
+
+    
+  </body>
+  <template id="template">
+    <article class="blogPost__container__post" tabindex="0">
+      <h2 class="blogPost__container__title"></h2>
+      <h3 class="blogPost__container__author"></h3>
+      <p class="blogPost__container__content"></p>
+    </article>
+  </template>
+  <script src="public/index.js"></script>
+</html>

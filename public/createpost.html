@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Add a blog post to the main blog page"/>
+    <title>Blog Post</title>
+    <link rel="stylesheet" type="text/css" href="public/index.css"   />
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    
+  </head>
+  <body>
+    <nav class="navbar">
+        <a href="/" class="navbar__links__link">home</a>
+        <a href="/displayForm" class="navbar__links__link">write post</a>
+    </nav>
+    <header>
+      <!-- <a href="/">Link to homepage </a> -->
+ 
+    </header>
+ 
+    <div class="form__container">
+    <div class="addBlogPostForm__wrapper">
+      <h3 class="addBlogPost__titlePage">Create a blog post</h3>
+      <form action="/createpost" method="POST" class="addBlogPostForm__form">
+        <div class="addBlogPostForm__form__inputContainer">
+          <label for="user" id="user" class="addBlogPostForm__form__labels">User:</label>
+          <input type="text" name="user" placeholder="Input name here" class="addBlogPostForm__form__input">
+        </div>
+        <div class="addBlogPostForm__form__inputContainer">
+          <label for="blogPostTitle" id="blogPostTitle" class="addBlogPostForm__form__labels">Title:</label>
+          <input type="text" name="blogPostTitle" placeholder="Input title here" class="addBlogPostForm__form__input">
+      </div>
+      <div class="addBlogPostForm__form__inputContainer">
+      <label for="blogpost" id="blogpost" class="addBlogPostForm__form__labels">Content:</label>
+        <textarea name="blogpost" rows="10" cols="14" class="addBlogPostForm__form__input"> </textarea>
+      </div>
+        <button class="form__container__button" type="submit">Send</button>
+      </form>
+    </div>
+    </div>
+  
+ </html>
