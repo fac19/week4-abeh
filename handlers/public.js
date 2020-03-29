@@ -9,7 +9,7 @@ const types = {
 
 function publicHandler(request, response) {
     let url = request.url;
-    console.log("publicHandler -> url", url)
+    // console.log("publicHandler -> url", url)
 
     let assestUrlArray = url.split('.');
     let assetExtension = assestUrlArray[1];

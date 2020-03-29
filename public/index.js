@@ -32,9 +32,10 @@ fetch("/getposts")
       author.textContent = post.user;
       body.textContent = post.blogpost;
 
-    //   deleteButton.addEventListener("click", () => {
-    //     fetch("/", { method: "DELETE", body: key }).then(location.reload());
-    //   });
+      deleteButton.addEventListener("click", () => {
+        fetch("/", { method: "DELETE", body: key })
+        .then(location.reload());
+      });
       postsList.appendChild(newBlog);
     });
   })
